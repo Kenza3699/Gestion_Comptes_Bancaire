@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="five" stylesheets="@bank.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AccountMIsideController">
+   <children>
+      <VBox alignment="CENTER" layoutX="167.0" layoutY="54.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="111.0" prefWidth="800.0" style="-fx-background-color: #019875;" VBox.vgrow="ALWAYS">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Control all B Banks" textAlignment="CENTER" wrappingWidth="666.53125" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold Italic" size="54.0" />
+                     </font>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#a46c18" />
+                              <Stop color="#d3d3d2" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Text>
+                  <ImageView fitHeight="88.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@Image/kisspng-bitcoin-cryptocurrency-monero-initial-coin-offerin-bitcoin-5abdfe6babbd25.0459423215224008757035.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="486.0" prefWidth="800.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox prefHeight="369.0" prefWidth="486.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="84.0" prefWidth="486.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Account list :" textAlignment="CENTER" wrappingWidth="236.13671875" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#dd9e16" />
+                                          <Stop color="#363534" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="tabCustomer" onMouseClicked="#SelectedItem" prefHeight="331.0" prefWidth="547.0">
+                          <columns>
+                            <TableColumn fx:id="colId" minWidth="9.0" prefWidth="102.0" text="Account number" />
+                            <TableColumn fx:id="colAdresse" minWidth="0.0" prefWidth="119.0" text="Adress" />
+                              <TableColumn fx:id="colName" minWidth="0.0" prefWidth="72.0" text="Name" />
+                              <TableColumn fx:id="colFamilyName" prefWidth="92.0" text="Family name" />
+                              <TableColumn fx:id="colAmount" prefWidth="100.0" text="Amount" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="412.0" prefWidth="313.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="80.0" prefWidth="313.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Customer information:" textAlignment="CENTER" wrappingWidth="188.13671875" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="0.7">
+                                       <stops>
+                                          <Stop color="#daaa39" />
+                                          <Stop color="#1e1d1d" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="313.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="txtfId" prefHeight="40.0" prefWidth="244.0" promptText="Account number" style="-fx-border-color: #019875; -fx-border-width: 0px 0px 2px 0px;">
+                                 <font>
+                                    <Font name="System Italic" size="17.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="313.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="txtfName" prefHeight="40.0" prefWidth="244.0" promptText="Name" style="-fx-border-color: #019875; -fx-border-width: 0px 0px 2px 0px;">
+                                 <font>
+                                    <Font name="System Italic" size="17.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="22.0" prefWidth="313.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="txtfFamilyName" prefHeight="40.0" prefWidth="244.0" promptText="Family name" style="-fx-border-color: #019875; -fx-border-width: 0px 0px 2px 0px;">
+                                 <font>
+                                    <Font name="System Italic" size="17.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="33.0" prefWidth="313.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="txtfAdresse" prefHeight="40.0" prefWidth="244.0" promptText="Adress" style="-fx-border-color: #019875; -fx-border-width: 0px 0px 2px 0px;">
+                                 <font>
+                                    <Font name="System Italic" size="17.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="290.0" prefHeight="47.0" prefWidth="313.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="txtfAmount" prefHeight="40.0" prefWidth="244.0" promptText="Amount" style="-fx-border-color: #019875; -fx-border-width: 0px 0px 2px 0px;">
+                                 <font>
+                                    <Font name="System Italic" size="17.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="45.0" prefWidth="313.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <PasswordField fx:id="txtfPassword" prefHeight="40.0" prefWidth="244.0" promptText="Password" style="-fx-border-color: #019875; -fx-border-width: 0px 0px 2px 0px;">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </PasswordField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="160.0" prefWidth="800.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="93.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button layoutX="17.0" layoutY="45.0" mnemonicParsing="false" onAction="#Delete" prefHeight="65.0" prefWidth="160.0" styleClass="btnC" text="Delete" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold Italic" size="30.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#97784d" />
+                                    <Stop color="#f8f7f5" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="93.0" prefWidth="199.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#Add" prefHeight="65.0" prefWidth="160.0" styleClass="btnC" text="Add" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold Italic" size="30.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#97784d" />
+                                    <Stop color="#f8f7f5" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="93.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button layoutX="47.0" layoutY="24.0" mnemonicParsing="false" onAction="#Update" prefHeight="65.0" prefWidth="160.0" styleClass="btnC" text="Update" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold Italic" size="30.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#97784d" />
+                                    <Stop color="#f8f7f5" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="93.0" prefWidth="180.0">
+                     <children>
+                        <Button fx:id="btnExit" mnemonicParsing="false" onAction="#Exit" prefHeight="65.0" prefWidth="160.0" styleClass="btnC" text="Exit" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold Italic" size="30.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#97784d" />
+                                    <Stop color="#f8f7f5" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

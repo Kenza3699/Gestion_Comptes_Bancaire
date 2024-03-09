@@ -1,0 +1,28 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.btnC {
+ -fx-background-color:  #019875;
+ -fx-background-radius: 20px
+    
+
+}
+.btnC:hover{
+    -fx-cursor: hand;
+    -fx-border-color: #019875;
+    -fx-background-color: white;
+    -fx-border-width: 5;
+    -fx-border-radius: 20px
+}
+.btnC:pressed{
+    -fx-rotate: 10
+}
+.jfxsnackbar-content{
+    -fx-background-color: #F00;
+    -fx-pref-tile-width: 400
+}
+.jfxsnackbar-toast{
+    -fx-text-fill: #FFF;
+    
+}
